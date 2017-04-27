@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/lamadipen/REST_API_JAXRS_Advance.png?label=ready&title=Ready)](https://waffle.io/lamadipen/REST_API_JAXRS_Advance)
 # REST_API_JAXRS_Advance
 
 What is this repository for?
