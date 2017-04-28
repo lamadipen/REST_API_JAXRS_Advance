@@ -11,10 +11,12 @@ import javax.ws.rs.core.MediaType;
 @Path("/test")
 public class MyResource {
 
+    private int counter;
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String getTest()
     {
-        return "This is from test method";
+        counter = counter+1;
+        return "This is from test method "+ counter;
     }
 }
