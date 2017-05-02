@@ -4,6 +4,7 @@ import com.dipen.model.Message;
 
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -34,6 +35,11 @@ public class RestApiClient {
         Message message = response.readEntity(Message.class);
 
         System.out.print(message.getMessage());
+
+        //using post method to create new message
+        Message newMessage = new Message(1,"New message from jax-rs client","Dipen");
+        Response postResponse = messageTarget.request().post(Entity.json(newMessage));
+
 
     }
 }
