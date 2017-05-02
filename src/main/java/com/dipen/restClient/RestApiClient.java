@@ -40,5 +40,6 @@ public class RestApiClient {
         Message newMessage = new Message(1,"New message from jax-rs client","Dipen");
         Response postResponse = messageTarget.request().post(Entity.json(newMessage));
 
+
     }
 }
