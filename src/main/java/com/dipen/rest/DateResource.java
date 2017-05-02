@@ -29,4 +29,12 @@ public class DateResource {
     {
         return Calendar.getInstance().getTime();
     }
+
+    @GET
+    @Path("/customMediaType")
+    @Produces(value = {"text/shortDate",MediaType.APPLICATION_JSON})
+    public Date getRequestedDateCustomMediaType(@PathParam("StringDate")MyDate myDate)
+    {
+        return Calendar.getInstance().getTime();
+    }
 }
